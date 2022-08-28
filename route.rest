@@ -1,0 +1,68 @@
+GET http://localhost:80/users
+
+
+###
+
+GET http://localhost:80/users/
+
+###
+
+POST http://localhost:80/users/
+content-Type: application/json
+
+{
+    "Username": "shaun",
+    "Email": "ss@gmail.com",
+    "Password": "123"
+}
+
+###
+
+DELETE http://localhost:80/users/6309a70d8d6f18319f05ca16
+
+###
+
+POST http://localhost:80/posts/
+Content-Type: application/json
+
+{
+    "Content": "James Harden is trash!",
+    "Topic": "Is James Harden all time top 10?",
+    "Side": "Agree",
+    "UserId": 123,
+    "Like": 0
+}
+
+
+###
+
+GET http://localhost:80/posts/
+
+###
+
+DELETE http://localhost:80/posts/630af3f794241fb9b4259a28
+
+###
+
+PATCH http://localhost:80/posts/630af4e39734d39e559fa571
+Content-Type: application/json
+
+{
+    "Like": 1
+}
+
+###
+
+POST http://localhost:80/topics/
+Content-Type: application/json
+
+{
+    "TopicName": "Is James Harden the all time top 10?",
+    "Popularity": 0,
+    "Agree": 0,
+    "Disagree": 0,
+    "UserId": "630afe77cf15a8f438bdede2",
+    "Like": 0,
+    "Source": "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQ-49emnsN0-MgAFFXL-nrktAACTv2XPaxKtmuZ5MknngOayRiHat5UVJ2bysUBBm2e",
+}
+
